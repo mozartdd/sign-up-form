@@ -62,10 +62,7 @@ header {
 
     background: var(--sky-color);
 }
-header div {
-    max-width: 1200px;
-    min-width: 600px;
-}
+
 h1 {
     font-size: clamp(1.3rem, 3.6vw, 2rem);
     padding: 3vw 55px 5px 160px;
@@ -100,6 +97,7 @@ form {
     column-gap: 3rem;
     /* row-gap: 0; */
     padding: 10px 40px 50px 160px;
+    position: relative;
 }
 /* form div {
     height: 20px;
@@ -135,11 +133,51 @@ button {
     color: rgba(0, 0, 0, 0.76);
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover {
+    background-color: #7699b1;
+    transform:translateY(-4px);
 }
 div > p {
     font-size: 1.2rem;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 div > p > a {
     color: rgb(87, 85, 85);
 }
+
+input:invalid {
+    border-bottom: 1px solid rgba(255, 0, 0, 0.507);
+}
+input:active, input:focus {
+    border-bottom: 1px solid rgb(61, 59, 59);
+    outline: none;
+    
+}
+
+form > div:nth-of-type(4) > input:focus + .info1::after {
+    content: '*Phone number must match xx-xxx-xxx format';
+    color: rgba(26, 25, 25, 0.74);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+form > div:nth-of-type(5) > input:focus + .info1::after {
+    content: '*Minimum passengers is 1 and maximum passengers is 4';
+    color: rgba(26, 25, 25, 0.74);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+form > div:nth-of-type(7) > input:focus + .info1::after {
+    content: '*Password requires at least one special character (non-alphanumeric), and a total length of 8 to 16 characters.';
+    color: rgba(26, 25, 25, 0.74);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.info1 {
+    position: absolute;
+    bottom: -20px;
+    left: 160px;
+}
+
