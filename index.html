@@ -13,15 +13,58 @@
     <div class="right-side">
         <header>
             <h1>
-                <i>'The sky is the limit!'</i>
+                Experience the magic of flight like never before. Step into the basket, rise with the sun, and float above breathtaking landscapes.
             </h1>
-            <p>-Tony Montana</p>
         </header>
         <main>
+            <h2>Sign up for your next flight!</h2>
+            <form id="a-form" action="SERVER" method="">
+                <div>
+                    <label for="first">FIRST NAME</label>
+                    <input id='first' name="first-name" type="text" required>
+                </div>
 
+                <div>
+                    <label for="last">LAST NAME</label>
+                    <input id="last" name="last-name" type="text" required>
+                </div>
+
+                <div>
+                    <label for="email">EMAIL</label>
+                    <input id="email" name="user-email" type="email">
+                </div>
+
+                <div>
+                    <label for="mobile">MOBILE NUMBER</label>
+                    <input id="mobile" name="user-number" type="tel" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" placeholder="xx-xxx-xxx">
+                </div>
+
+                <div>
+                    <label for="guest-amount">HOW MANY PEOPLE</label>
+                    <input placeholder="" id="guest-amount" name="how-many-guests" min="1" max="4" type="number" required>
+                </div>
+
+                <div>
+                    <label for="date">DATE OF FLIGHT</label>
+                    <input id="date" name="date-of-flight" type="date" required>
+                </div>
+
+                <div>
+                    <label for="password">PASSWORD</label>
+                    <input id="password" name="user-password" type="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,16}$" required>
+                </div>
+
+                <div>
+                    <label for="password-confirm">CONFIRM PASSWORD</label>
+                    <input id="password-confirm"  type="password">
+                </div>
+            </form>
         </main>
         <footer>
-
+            <div>
+                <button type="submit" form="a-form">Book a flight</button>
+                <p>Already have an account? <a href="#"> Log in</a></p>
+            </div>
         </footer>
     </div>
 </body>
