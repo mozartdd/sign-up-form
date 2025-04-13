@@ -1,0 +1,79 @@
+@import url(/modern-normalize/modern-normalize.css);
+
+:root {
+    --sky-color: linear-gradient(
+        to right,
+        #bbc1c5,#e4e0de
+      );
+    --alice-blue: linear-gradient(
+        to right,
+        #a5b5c0,#dce1e4
+      );
+      --main-shadow: -1px -1px 10px 1px gray;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    background-image: url(joao-marta-sanfins-SnyAUL9pWrA-unsplash.jpg);
+    background-size: cover;
+    box-shadow: var(--main-shadow);
+    z-index: 1;
+
+    width: 40%;
+    height: 100vh;
+}
+.left-side > p {
+    color: white;
+}
+.left-side > p > a {
+    color: skyblue;
+    font-size: 1.2rem;
+    /* text-decoration: none; */
+}
+.left-side > p > a:hover {
+    color: pink;
+    font-size: 1.2rem;
+    /* text-decoration: none; */
+}
+.right-side {
+    width: 60%;
+    height: 100vh;
+}
+
+header {
+    height: 25%;
+    width: 100%;
+
+    background: var(--sky-color);
+}
+h1 {
+    font-size: 2.3rem;
+    padding-top: 100px;
+    text-align: center;
+}
+header > p {
+    font-size: 1.6rem;
+    padding-left: 200px;
+    text-align: center;
+}
+
+main {
+    height: 45%;
+
+    background: var(--alice-blue);
+    box-shadow: var(--main-shadow);
+}
+
+footer {
+    height: 30%;
+    background: var(--sky-color);
+    box-shadow: var(--main-shadow);
+}
