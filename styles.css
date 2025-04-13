@@ -43,6 +43,14 @@ body {
     color: pink;
     font-size: 1.2rem;
 }
+.black-line {
+    position: absolute;
+    width: 40%;
+    top: 325px;
+    height: 140px;
+    background: #a5b5c09f;
+}
+
 .right-side {
     width: 60%;
     height: 100vh;
@@ -54,10 +62,14 @@ header {
 
     background: var(--sky-color);
 }
+header div {
+    max-width: 1200px;
+    min-width: 600px;
+}
 h1 {
-    font-size: clamp(1.3rem, 3.9vw, 2.2rem);
-    padding: 3vw 55px 5px 55px;
-    text-align: center;
+    font-size: clamp(1.3rem, 3.6vw, 2rem);
+    padding: 3vw 55px 5px 160px;
+
     color: rgb(26, 25, 25);
 }
 
@@ -70,7 +82,7 @@ main {
 h2 {
     font-size: 2rem;
     color: rgba(26, 25, 25, 0.856);
-    padding: 15px 0 0 60px;
+    padding: 15px 0 0 160px;
     font-weight: bold;
 }
 
@@ -83,11 +95,11 @@ footer {
 form {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 700px;
     height: 65%;
     column-gap: 3rem;
     /* row-gap: 0; */
-    padding: 10px 40px 50px 60px;
+    padding: 10px 40px 50px 160px;
 }
 /* form div {
     height: 20px;
@@ -96,39 +108,37 @@ label {
     display: block;
     color: rgba(26, 25, 25, 0.74);
     font-weight: bold;
+    padding: none;
 }
 
 input {
     background: none;
-    border: 1px solid rgba(26, 25, 25, 0.74);
-    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid rgba(26, 25, 25, 0.74);
     height: 2rem;
     font-size: 1.2rem;
-    width: 300px;
+    width: 200px;
 }
 
 
 footer > div {
-    padding: 30px 0 0 60px;
-    width: 400px;
+    padding: 30px 0 0 150px;
 }
 
 button {
-    margin: 5px auto;
-    padding: 15px 15px 40px 15px;
-    width: 220px;
-    height: 1.2rem;
+    width: 280px;
+    height: 2.5rem;
     border: 1px solid rgba(26, 25, 25, 0.74);
     border-radius: 12px;
     display: block;
-    background: rgba(135, 207, 235, 0.685);
+    background: #a5b5c0;
     color: rgba(0, 0, 0, 0.76);
     font-size: 1.5rem;
     font-weight: bold;
 }
 div > p {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 div > p > a {
     color: rgb(87, 85, 85);
