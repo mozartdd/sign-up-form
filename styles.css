@@ -95,13 +95,10 @@ form {
     width: 700px;
     height: 65%;
     column-gap: 3rem;
-    /* row-gap: 0; */
     padding: 10px 40px 50px 160px;
     position: relative;
 }
-/* form div {
-    height: 20px;
-} */
+
 label {
     display: block;
     color: rgba(26, 25, 25, 0.74);
