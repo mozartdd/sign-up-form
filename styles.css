@@ -109,7 +109,7 @@ label {
     padding: none;
 }
 
-input {
+input, select {
     background: none;
     border: none;
     border-bottom: 1px solid rgba(26, 25, 25, 0.74);
@@ -163,11 +163,9 @@ form > div:nth-of-type(4) > input:focus + .info1::after {
     font-size: 1.3rem;
     font-weight: bold;
 }
-form > div:nth-of-type(5) > input:focus + .info1::after {
-    content: '*Minimum passengers is 1 and maximum passengers is 4';
-    color: rgba(26, 25, 25, 0.74);
-    font-size: 1.3rem;
-    font-weight: bold;
+
+select:first-child {
+    background-color: red;
 }
 form > div:nth-of-type(7) > input:focus + .info1::after {
     content: '*Password requires at least one special character (non-alphanumeric), and a total length of 8 to 16 characters.';
