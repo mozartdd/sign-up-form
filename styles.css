@@ -145,11 +145,11 @@ div > p > a {
     color: rgb(87, 85, 85);
 }
 
-input:invalid {
-    border-bottom: 1px solid rgba(255, 0, 0, 0.507);
+input:invalid, select:invalid {
+    border-bottom: 2px solid rgba(255, 0, 0, 0.507);
 }
 input:active, input:focus {
-    border-bottom: 1px solid rgb(61, 59, 59);
+    border-bottom: 2px solid rgb(61, 59, 59);
     outline: none;
     
 }
