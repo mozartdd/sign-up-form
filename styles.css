@@ -1,4 +1,4 @@
-@import url(/modern-normalize/modern-normalize.css);
+@import url(modern-normalize.css);
 
 :root {
     --sky-color: linear-gradient(
@@ -18,7 +18,7 @@ body {
 }
 
 .left-side {
-    /* ALIGNS IMG AUTHOR REFERENCE TO END AND MIDDLE */
+    /* ALIGNS IMG AUTHOR REFERENCE TO END AND MIDDLE */ 
     display: flex;
     justify-content: center;
     align-items: end;
