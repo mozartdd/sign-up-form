@@ -145,19 +145,35 @@ div > p > a {
     color: rgb(87, 85, 85);
 }
 
-input:invalid, select:invalid {
-    border-bottom: 2px solid rgba(255, 0, 0, 0.507);
-}
-input:valid, select:valid {
-    border-bottom: 2px solid rgb(14, 189, 58);
-}
 input:active, input:focus {
     border-bottom: 2px solid rgb(61, 59, 59);
     outline: none;
     
 }
 
-form > div:nth-of-type(4) > input:focus + .info1::after {
+
+/* Validation Feedback */
+form > div:nth-of-type(1) > input:invalid + .info2::after,
+form > div:nth-of-type(2) > input:invalid + .info2::after,
+form > div:nth-of-type(3) > input:invalid + .info2::after,
+form > div:nth-of-type(4) > input:invalid + .info2::after,
+form > div:nth-of-type(6) > input:invalid + .info2::after,
+form > div:nth-of-type(7) > input:invalid + .info2::after,
+form > div:nth-of-type(8) > input:invalid + .info2::after {
+  content: '❌';
+}
+
+form > div:nth-of-type(1) > input:valid + .info2::after,
+form > div:nth-of-type(2) > input:valid + .info2::after,
+form > div:nth-of-type(3) > input:valid + .info2::after,
+form > div:nth-of-type(4) > input:valid + .info2::after,
+form > div:nth-of-type(6) > input:valid + .info2::after,
+form > div:nth-of-type(7) > input:valid + .info2::after,
+form > div:nth-of-type(8) > input:valid + .info2::after {
+  content: '✔️';
+  color: green;
+}
+form > div:nth-of-type(4) > input:focus ~ .info1::before {
     content: '*Phone number must match xx-xxx-xxx format';
     color: rgba(26, 25, 25, 0.74);
     font-size: 1.3rem;
@@ -167,7 +183,7 @@ form > div:nth-of-type(4) > input:focus + .info1::after {
 select:first-child {
     background-color: red;
 }
-form > div:nth-of-type(7) > input:focus + .info1::after {
+form > div:nth-of-type(7) > input:focus ~ .info1::before {
     content: '*Password requires at least one special character (non-alphanumeric), and a total length of 8 to 16 characters.';
     color: rgba(26, 25, 25, 0.74);
     font-size: 1.3rem;
@@ -177,5 +193,13 @@ form > div:nth-of-type(7) > input:focus + .info1::after {
     position: absolute;
     bottom: -20px;
     left: 160px;
+}
+.info2 {
+    position: relative;
+    height: 0px;
+    top: -28px;
+    left: 205px;
+    font-size: 1.2rem;
+    color: red; 
 }
 

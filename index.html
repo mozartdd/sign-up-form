@@ -25,28 +25,32 @@
                 <div>
                     <label for="first">FIRST NAME</label>
                     <input id='first' name="first-name" type="text" required>
+                    <div class="info2"></div>
                 </div>
 
                 <div>
                     <label for="last">LAST NAME</label>
                     <input id="last" name="last-name" type="text" required>
+                    <div class="info2"></div>
                 </div>
 
                 <div>
                     <label for="email">EMAIL</label>
                     <input id="email" name="user-email" type="email" required>
+                    <div class="info2"></div>
                 </div>
 
                 <div>
                     <label for="mobile">MOBILE NUMBER</label>
                     <input id="mobile" name="user-number" type="tel" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" placeholder="xx-xxx-xxx">
+                    <div class="info2"></div>
                     <div class="info1"></div>
                 </div>
 
                 <div>
                     <label for="guest-amount">HOW MANY PEOPLE</label>
-                    <select name="guest-quantity" id="guest-amount" required>
-                        <option value="">Guest amount</option>
+                    <select name="guest-quantity" id="guest-amount">
+                        <option value="" disabled selected>Guest amount</option>
                         <option value="one">1</option>
                         <option value="two">2</option>
                         <option value="three">3</option>
@@ -57,17 +61,21 @@
                 <div>
                     <label for="date">DATE OF FLIGHT</label>
                     <input id="date" name="date-of-flight" type="date" required>
+                    <div class="info2"></div>
                 </div>
 
                 <div>
                     <label for="password">PASSWORD</label>
                     <input id="password" name="user-password" type="password" pattern="^(?=.*[^A-Za-z0-9]).{8,16}$" required>
+                    <div class="info2"></div>
                     <div class="info1"></div>
+
                 </div>
 
                 <div>
                     <label for="password-confirm">CONFIRM PASSWORD</label>
                     <input id="password-confirm"  type="password" required>
+                    <div class="info2"></div>
                     <div class="info1"></div>
                 </div>
             </form>
